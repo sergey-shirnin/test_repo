@@ -15,7 +15,7 @@ class TestPassword(unittest.TestCase):
     def test_length(self):
         """Тест, что при генерации используются только допустимые символы"""
         password = generate_password(10)  # Генерируем длинный пароль для более надежной проверки
-        self.assertIn(password, 19)
+        self.assertGreater(len(password), 19)
 
 """
 Допиши еще один тест из предложенных. Или придумай свой.
